@@ -10,12 +10,7 @@ body {
     background-color:#070F17;
     color: white;
     font-family: "Poppins", sans-serif;
-    scroll-behavior: smooth;
-}
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1;
+
 }
 
 #navbar {
@@ -65,7 +60,7 @@ hr{
 }
 #title{
 
-    font-size:48px;
+    font-size:72px;
     color:#D6DDE6;
     text-align: center;
     margin:90px 0;
@@ -153,7 +148,11 @@ h2:hover{
 .content {
     padding: 50px;           
     max-width: 980px;          
-
+    transition: transform 0.3s ease-in-out;
+}
+.content:hover{
+    transform: scale(1.02);
+    
 }
 #Touch{
     padding: 0 100px;
@@ -172,6 +171,10 @@ h2:hover{
     font-size:24px ;
     font-weight: 500;
     width:40%;
+}
+.left1:hover{
+    color:#c3c4c4;
+    cursor: pointer;
 }
 .Contact{
     display: flex;
@@ -209,7 +212,8 @@ h2:hover{
 }
 .btn:hover{
     background-color: #81b834 ;
-    transform: scale(1.01);
+    transform: scale(1.05);
+    cursor: pointer;
 }
 #skip{
     margin: 10px auto;
@@ -220,6 +224,7 @@ h2:hover{
 
 #skip:hover{
     color: #81b834;
+    cursor: pointer;
 }
 #form{
     margin-top : 20px;
@@ -255,25 +260,102 @@ h2:hover{
     padding:12px 24px;
     font-weight: 600;
 }
-@media (max-width: 768px) {
-    #content {
-        font-size: 36px;
-        line-height: 42px;
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    #navbar {
+        padding: 0 20px;
     }
-
-    .content {
-        padding: 20px;
+    .left {
+        font-size: 30px;
+    }
+    #content {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    #title {
+        font-size: 36px;
+    }
+    #img1 {
+        width: 80%;
     }
 }
 
 @media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        height: auto;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    #content {
+        font-size: 36px;
+        line-height: 42px;
+        padding: 20px;
+    }
+    .content {
+        padding: 20px;
+    }
     #images {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #Touch {
+        flex-direction: column;
+        align-items: center;
+       padding:20px;
+    }
+    .left1 {
+        font-size: 36px;
+    }
+    .right1 {
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    .btn {
+        width: 80%;
     }
 }
 
 @media (max-width: 480px) {
+    #navbar {
+        padding: 0 10px;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    .left {
+        font-size: 28px;
+    }
+    #title {
+        font-size: 30px;
+    }
+    #content {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    #img1 {
+        width: 100%;
+    }
     #images {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
+    }
+    .footer {
+        flex-direction: column;
+        margin: 50px 10px;
+        align-items: center;
+    }
+    .left2 {
+        font-size: 24px;
+    }
+    .right2 {
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
     }
 }
